@@ -1,0 +1,37 @@
+/*----------------------we creates a class named item*/
+/*----------------------we have a loop to creates diferents class named item-n*/
+.item-1 {
+  width: 61px; }
+
+.item-2 {
+  width: 62px; }
+
+.item-3 {
+  width: 63px; }
+
+.item-4 {
+  width: 64px; }
+
+/*---------------Mixins are like placeholder*/
+/*--------------Here we ask to include in our p the properties of unicornify*/
+p {
+  background-color: pink;
+  color: white;
+  border: 1px solid pink;
+  border-radius: 100%;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold; }
+
+/*--------------Here we ask to include in our class the properties of button*/
+.btn {
+  width: 200px;
+  height: 100px;
+  border: 1px solid #e84610;
+  /*-------------------Aqui tienes un if*/
+  color: #fff; }
+
+h1 {
+  border: 1px solid black; }
+
+/*# sourceMappingURL=main.css.map */

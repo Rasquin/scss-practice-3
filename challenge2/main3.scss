@@ -1,0 +1,16 @@
+$colors: #aaa, #bbb, #ccc, #ddd;
+
+@each $color in $colors {
+    $i: index($colors, $color);
+    .container-#{$i} {
+        background-color: $color;
+    }
+}
+
+@each $colorete in $colors {
+    $i: index($colors, $colorete); /*Estoy senalando mi indice que se mueve en la lista*/
+    .container-#{$i}{
+        background-color:$colorete;
+    }
+    
+}

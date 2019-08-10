@@ -1,0 +1,50 @@
+/*----------------------we creates a class named item*/
+$class-name: item;
+
+/*----------------------we have a loop to creates diferents class named item-n*/
+@for $i from 1 through 4 {
+    .#{$class-name}-#{$i} {
+        width: 60px + $i;
+    }
+}
+
+/*---------------Mixins are like placeholder*/
+@mixin button($color, $size) {
+    width: $size;
+    height: $size / 2;
+    border: 1px solid $color;
+    /*-------------------Aqui tienes un if*/
+    @if $color == #e84610 {
+        color: #fff;
+    } @else {
+        color: $color;
+    }
+}
+
+@mixin unicornify() {
+    background-color: pink;
+    color: white;
+    @content;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/*--------------Here we ask to include in our p the properties of unicornify*/
+p {
+    @include unicornify {
+        border: 1px solid pink;
+        border-radius: 100%;
+        text-align: center;
+    }
+}
+
+/*--------------Here we ask to include in our class the properties of button*/
+.btn {
+    @include button(#e84610, 200px)
+}
+
+h1 {
+    @if 1 + 1 == 2 {
+        border: 1px solid black;
+    }
+}
